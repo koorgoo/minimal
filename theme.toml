@@ -5,14 +5,14 @@ name = "Minimal"
 license = "MIT"
 licenselink = "http://github.com/koorgoo/minimal/blob/master/LICENSE"
 description = "Port of Jekyll theme to Hugo"
-homepage = "https://koorgoo.github.io/minimal"
-tags = []
+homepage = "https://koorgoo.github.io/minimal-site"
+tags = ["minimal"]
 features = []
 min_version = "0.25.1"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Dima Kurguzov"
+  homepage = "https://koorgoo.github.io"
 
 # If porting an existing theme
 [original]
