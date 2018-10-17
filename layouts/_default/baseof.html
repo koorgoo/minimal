@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,15 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![end]-->
-    {{ block "head" . }}{{ end }}
+    {{- partial "head.html" }}
   </head>
   <body>
     <div class="wrapper">
-      {{ partial "header.html" . }}
+      {{ partial "theme/header.html" . }}
       <section>
       {{ block "content" . }}{{ end }}
       </section>
-      {{ partial "footer.html" . }}
+      {{ partial "theme/footer.html" . }}
     </div>
     <script src="{{ .Site.BaseURL }}/js/scale.fix.js"></script>
     {{ template "_internal/google_analytics_async.html" . }}
