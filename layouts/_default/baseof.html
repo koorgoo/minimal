@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
     {{ .Site.Params.seo }}
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![end]-->
@@ -19,7 +19,7 @@
       </section>
       {{ partial "footer.html" . }}
     </div>
-    <script src="{{ .Site.BaseURL }}js/scale.fix.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/scale.fix.js"></script>
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>
