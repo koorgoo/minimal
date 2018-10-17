@@ -1,0 +1,6 @@
+<footer>
+  {{ if .Site.Params.github.isProjectPage -}}
+  <p>This project is maintained by <a href="{{ .Site.Params.github.ownerURL }}">{{ .Site.Params.github.ownerName }}</a></p>
+  {{- end }}
+  <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+</footer>

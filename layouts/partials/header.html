@@ -1,0 +1,25 @@
+<header>
+  <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+
+  {{ if .Site.Params.logo -}}
+    <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="Logo" />
+  {{- end }}
+
+  <p>{{ .Site.Params.description }}</p>
+
+  {{ if .Site.Params.github.isProjectPage -}}
+    <p class="view"><a href="{{ .Site.Params.github.repositoryURL }}">View the Project on GitHub <small>{{ .Site.Params.github.repositoryNWO }}</small></a></p>
+  {{- end }}
+
+  {{ if .Site.Params.github.isUserPage -}}
+    <p class="view"><a href="{{ .Site.Params.github.ownerURL }}">View My GitHub Profile</a></p>
+  {{- end }}
+
+  {{ if .Site.Params.showDownloads -}}
+  <ul class="downloads">
+    <li><a href="{{ .Site.Params.github.zipURL }}">Download <strong>ZIP File</strong></a></li>
+    <li><a href="{{ .Site.Params.github.tarURL }}">Download <strong>TAR Ball</strong></a></li>
+    <li><a href="{{ .Site.Params.github.repositoryURL }}">View On <strong>GitHub</strong></a></li>
+  </ul>
+  {{- end }}
+</header>

@@ -1,0 +1,14 @@
+{{ define "content" -}}
+<small>{{ .Date.Format "2 January 2006" }}</small>
+<h1>{{ .Title }}</h1>
+
+{{ if $.Param "Author" -}}
+  <p class="view">by {{ $.Param "Author" }}</p>
+{{- end }}
+
+{{ .Content }}
+
+{{ if .Params.tags -}}
+  <small>tags: <em>{{ delimit .Params.tags "</em> - <em>" }}</em></small>
+{{- end }}
+{{- end }}
